@@ -5,6 +5,8 @@ source ~/.bashrc
 ```
 ``` bash
 seqtk sample -s100 ERR251429_1.fastq 0.1 > ERR251429_1_subsampled.fastq
+seqtk sample -s100 ERR251429_2.fastq 0.1 > ERR251429_2_subsampled.fastq
+
 ```
 
 
