@@ -15,8 +15,8 @@ module load bcftools
 
 # Define file paths and directories
 WORKDIR="/ocean/projects/agr250001p/jparedesmontero"
-READS_1="$WORKDIR/ERR251429_1.fastq"
-READS_2="$WORKDIR/ERR251429_2.fastq"
+READS_1="$WORKDIR/ERR251429_1_subsample.fastq"
+READS_2="$WORKDIR/ERR251429_2_subsample.fastq"
 REFERENCE="$WORKDIR/GCF_000001405.40_GRCh38.p14_genomic.fna"
 SAM_OUTPUT="$WORKDIR/ERR251429.sam"
 SORTED_BAM="$WORKDIR/ERR251429_sorted.bam"
@@ -24,8 +24,8 @@ BCF_OUTPUT="$WORKDIR/ERR251429.bcf"
 VCF_OUTPUT="$WORKDIR/ERR251429.vcf"
 COMPRESSED_VCF="$WORKDIR/ERR251429.vcf.gz"
 
-echo "Indexing reference genome..."
-bowtie2-build $REFERENCE human_genome_reference
+#echo "Indexing reference genome..."
+#bowtie2-build $REFERENCE human_genome_reference
 
 echo "Running Bowtie2..."
 bowtie2 --very-fast -p 8 -x $REFERENCE -1 $READS_1 -2 $READS_2 -S $SAM_OUTPUT
