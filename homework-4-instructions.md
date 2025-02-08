@@ -127,6 +127,15 @@ bowtie2-build --threads 16 $REFERENCE human_genome_reference
   ```bash
   squeue -u your-username
   ```
+## CHECK YOUR INPUT FILES 
+
+This workflow should generate the following file.
+- ERR251429.bcf
+- ERR251429.sam
+- ERR251429.vcf
+- ERR251429_sorted.bam
+- ERR251429_sorted.bam.bai
+
 
 ## YOU HAVE JUST ASSEMBLED A HUMAN GENOME AND COMPARED IT TO A REFERENCE GENOME TO DISCOVER SNPs (Single Nucleotide Polymorphisms)
 
