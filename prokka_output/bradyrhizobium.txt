@@ -1,0 +1,7 @@
+organism: Bradyrhizobium japonicum strain 
+contigs: 1
+bases: 9105828
+CDS: 8490
+rRNA: 3
+tRNA: 55
+tmRNA: 1
