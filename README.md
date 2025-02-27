@@ -1,4 +1,4 @@
-!# week-4-repository
+week-4-repository
 # OUTLINE
 
 1. sra-toolkit configuration and job re-submission

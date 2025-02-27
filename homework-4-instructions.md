@@ -127,6 +127,15 @@ bowtie2-build --threads 16 $REFERENCE human_genome_reference
   ```bash
   squeue -u your-username
   ```
+## CHECK YOUR INPUT FILES 
+
+This workflow should generate the following file.
+- ERR251429.bcf
+- ERR251429.sam
+- ERR251429.vcf
+- ERR251429_sorted.bam
+- ERR251429_sorted.bam.bai
+
 
 ## YOU HAVE JUST ASSEMBLED A HUMAN GENOME AND COMPARED IT TO A REFERENCE GENOME TO DISCOVER SNPs (Single Nucleotide Polymorphisms)
 
@@ -149,7 +158,7 @@ SNPs can arise due to sequencing errors (which are rare in this curated dataset)
    ```
 3. Copy the extracted SNP data.
 4. Navigate to [ENSEMBL VEP](https://useast.ensembl.org/Tools/VEP).
-5. Register and log in if required.
+5. Register and log in.
 6. Click on `New job`.
 7. Paste the copied SNPs into the `Input data` box.
 8. Explore the `Additional configurations` section. Click the `+` symbol to expand options and hover over them to understand their purpose. Under the `Prediction` tab, enable the `REVEL` and `ClinPred` options, which predict the potential pathogenicity of SNPs. You may explore other available options as well.
