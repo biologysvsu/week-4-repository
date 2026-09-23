@@ -10,7 +10,7 @@
 ## GO TO PERSONAL STORAGE DIRECTORY
 - Navigate to your personal storage directory:
   ```bash
-  cd /ocean/projects/agr250001p/your-psc-username
+  cd /ocean/projects/bio260081p/your-username
   ```
 
 ## MAKE SURE YOU HAVE THE FOLLOWING INPUT FILES
@@ -50,7 +50,7 @@ interact -t 3:00:00 --ntasks-per-node=16 --mem=31G
 module load bowtie2/2.4.4
 
 # Create the Bowtie Index Files (do not run this if your `.bt2` files are already available)
-WORKDIR="/ocean/projects/agr250001p/your-username"
+WORKDIR="/ocean/projects/bio260081p/your-username"
 REFERENCE="$WORKDIR/GCF_000001405.40_GRCh38.p14_genomic.fna"
 
 bowtie2-build --threads 16 $REFERENCE human_genome_reference
@@ -58,16 +58,14 @@ bowtie2-build --threads 16 $REFERENCE human_genome_reference
 
 ## PREPARE THE SLURM SCRIPT TO RUN THE SNP CALL JOB
 
-- If you do not have the script, you can copy it from our shared weekly folder:
-  ```bash
-  cp /ocean/projects/agr250001p/shared/week-4-data/snpcall.slurm .
-  ```
-- If you would like to write the script, simply create the script using the `vi` editor:
+- to write the script, simply create the script using the `vi` editor:
   ```bash
   vi snpcall.slurm
   ```
 - Type `i` to enter `Insert` mode
-- Copy and paste the following workflow. **Make sure you replace `your-username` and `your-email@svsu.edu` with your actual information.**
+- Copy and paste the following workflow.
+
+**Make sure you replace `your-username` and `your-email@svsu.edu` with your actual information.**
   ```bash
   #SBATCH --job-name=ERR251429_bowtie2
   #SBATCH --partition=RM-shared
