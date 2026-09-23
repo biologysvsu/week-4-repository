@@ -43,8 +43,8 @@ interact -p RM-shared --ntasks-per-node=8 -t 01:00:00
 
 6. **Run BLASTX (nuc - prot) against the protein database**
    ```bash
-blastx -query your-unk.fasta -db human_prot_db -out results_prot.txt -num_threads 8 -outfmt "6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore stitle" 
-```
+   blastx -query your-unk.fasta -db human_prot_db -out results_prot.txt -num_threads 8 -outfmt "6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore stitle"
+   ```
 
 7. **Copy results to the repository folder and push to GitHub**
    ```bash
