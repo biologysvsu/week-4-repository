@@ -9,7 +9,10 @@ vdb-config --interactive
 ``` bash
 cd /ocean/projects/agr250001p/your-username
 ```
-
+### Obtain resources to run job manually
+```
+interact -p RM-shared --ntasks-per-node=8 -t 01:00:00
+```
 1.  **Download the nucleotide sequence database**
    ```bash
    wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.40_GRCh38.p14/GCF_000001405.40_GRCh38.p14_cds_from_genomic.fna.gz
@@ -24,7 +27,7 @@ cd /ocean/projects/agr250001p/your-username
 
 3. **Run BLASTN against the nucleotide database**
    ```bash
-   blastn -query unk.fasta -db human_nucl_db -out results_nucl.txt -outfmt "6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore stitle"
+   blastn -task megablast -query your-unk.fasta -db human_nucl_db -out results_nucl.txt -num_threads 8 -outfmt "6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore stitle"
    ```
 
 4. **Download the protein sequence database**
