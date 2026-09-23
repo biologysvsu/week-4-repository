@@ -10,7 +10,7 @@
 ## GO TO PERSONAL STORAGE DIRECTORY
 - Navigate to your personal storage directory:
   ```bash
-  cd /ocean/projects/agr250001p/your-psc-username
+  cd /ocean/projects/bio260081p/your-psc-username
   ```
 
 ## MAKE SURE YOU HAVE THE FOLLOWING INPUT FILES
