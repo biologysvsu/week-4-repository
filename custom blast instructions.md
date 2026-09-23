@@ -41,10 +41,10 @@ interact -p RM-shared --ntasks-per-node=8 -t 01:00:00
    makeblastdb -in GCF_000001405.40_GRCh38.p14_protein.faa -dbtype prot -out human_prot_db
    ```
 
-6. **Run BLASTP against the protein database**
+6. **Run BLASTX (nuc - prot) against the protein database**
    ```bash
-   blastp -query unk.fasta -db human_prot_db -out results_prot.txt -outfmt "6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore stitle"
-   ```
+blastx -query your-unk.fasta -db human_prot_db -out results_prot.txt -num_threads 8 -outfmt "6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore stitle" 
+```
 
 7. **Copy results to the repository folder and push to GitHub**
    ```bash
