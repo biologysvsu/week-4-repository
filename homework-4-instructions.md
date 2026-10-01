@@ -67,6 +67,7 @@ bowtie2-build --threads 16 $REFERENCE human_genome_reference
 
 **Make sure you replace `your-username` and `your-email@svsu.edu` with your actual information.**
   ```bash
+  #!/bin/bash
   #SBATCH --job-name=ERR251429_bowtie2
   #SBATCH --partition=RM-shared
   #SBATCH --ntasks=16
@@ -92,7 +93,7 @@ bowtie2-build --threads 16 $REFERENCE human_genome_reference
   VCF_OUTPUT="$WORKDIR/ERR251429.vcf"
   COMPRESSED_VCF="$WORKDIR/ERR251429.vcf.gz"
 
-  BOWTIEREF="$WORKDIR/human_bowtie_reference"
+  BOWTIEREF="$WORKDIR/human_genome_reference"
 
   echo "Running Bowtie2..."
   bowtie2 --very-fast -p 16 -x $BOWTIEREF -1 $READS_1 -2 $READS_2 -S $SAM_OUTPUT
@@ -148,7 +149,7 @@ SNPs can arise due to sequencing errors (which are rare in this curated dataset)
 
 1. Extract 20 random SNPs from the `ERR251429.vcf` file:
    ```bash
-   grep -v "^#" ERR251429.vcf | shuf -n 20 > selected_snps.txt
+   grep -v "^#" ERR251429.vcf | shuf -n 10 > selected_snps.txt
    ```
 2. Display the selected SNPs:
    ```bash
