@@ -155,7 +155,7 @@ SNPs can arise due to sequencing errors (which are rare in this curated dataset)
    cat selected_snps.txt
    ```
 3. Copy the extracted SNP data.
-4. Navigate to [ENSEMBL VEP]([https://jun2026.archive.ensembl.org/info/docs/tools/vep/index.html]).
+4. Navigate to [ENSEMBL VEP](https://jun2026.archive.ensembl.org/Tools/VEP).
 5. Register and log in.
 6. Click on `New job`.
 7. Paste the copied SNPs into the `Input data` box.
