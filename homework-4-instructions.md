@@ -158,8 +158,11 @@ SNPs can arise due to sequencing errors (which are rare in this curated dataset)
 3. Copy the extracted SNP data.
 4. Navigate to [ENSEMBL VEP](https://jun2026.archive.ensembl.org/Tools/VEP).
 5. Register and log in.
-6. Click on `New job`.
-7. Paste the copied SNPs into the `Input data` box.
-8. Explore the `Additional configurations` section. Click the `+` symbol to expand options and hover over them to understand their purpose. Under the `Prediction` tab, enable the `REVEL` and `ClinPred` options, which predict the potential pathogenicity of SNPs. You may explore other available options as well.
-9. Click `Run` and wait a few minutes for the analysis to complete.
-10. Review your results and answer the 15 questions provided in Homework 4.
+   If you have issues creating an account, use our classroom credentials to login:
+   Username: jparedes@svsu.edu
+   Password: b10l0g1 (the Os are zeros)
+7. Click on `New job`.
+8. Paste the copied SNPs into the `Input data` box.
+9. Explore the `Additional configurations` section. Click the `+` symbol to expand options and hover over them to understand their purpose. Under the `Prediction` tab, enable the `REVEL` and `ClinPred` options, which predict the potential pathogenicity of SNPs. You may explore other available options as well.
+10. Click `Run` and wait a few minutes for the analysis to complete.
+11. Review your results and answer the 15 questions provided in Homework 4.
