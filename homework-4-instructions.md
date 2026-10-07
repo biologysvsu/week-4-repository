@@ -20,8 +20,8 @@
 - These FASTQ files will be subsampled because they are too large for our purposes. We use the software `seqtk`.
 - First, add the `seqtk` file to your `PATH` using the following lines of code:
   ```bash
-echo 'export PATH=/ocean/projects/bio260081p/shared/software/seqtk:$PATH' >> ~/.bashrc
-source ~/.bashrc
+  echo 'export PATH=/ocean/projects/bio260081p/shared/software/seqtk:$PATH' >> ~/.bashrc
+  source ~/.bashrc
   ```
 - Now you are ready to subsample the files. We will sample 10% of the original file.
   ```bash
