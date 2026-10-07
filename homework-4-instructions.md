@@ -55,7 +55,33 @@ REFERENCE="$WORKDIR/GCF_000001405.40_GRCh38.p14_genomic.fna"
 
 bowtie2-build --threads 16 $REFERENCE human_genome_reference
 ```
+Alternatively, you can create the bowtie index in the backgroung:
+```
+vi index.slurm
+```
+Type I to edit file, then copy and paste the following script:
+```
+#!/bin/bash
+#SBATCH --job-name=bowtie2_build
+#SBATCH --output=bowtie2_build_%j.out
+#SBATCH --error=bowtie2_build_%j.err
+#SBATCH --time=03:00:00
+#SBATCH --ntasks-per-node=16
+#SBATCH --mem=31G
 
+# Load the required software
+module load bowtie2/2.4.4
+
+# Define paths (replace 'your-username' with your actual username)
+WORKDIR="/ocean/projects/bio260081p/your-username"
+REFERENCE="$WORKDIR/GCF_000001405.40_GRCh38.p14_genomic.fna"
+
+# Change to working directory
+cd $WORKDIR
+
+# Create the Bowtie Index Files
+bowtie2-build --threads 16 $REFERENCE human_genome_reference
+```
 ## PREPARE THE SLURM SCRIPT TO RUN THE SNP CALL JOB
 
 - to write the script, simply create the script using the `vi` editor:
